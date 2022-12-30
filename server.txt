@@ -18,3 +18,21 @@ luego del server.js, hay que modificar el package.json
 2. dentro de scripts, agregar "server" : "nodemon server"
 3. agregar "type": "module"
 
+
+DEPLOY
+- primero el front side
+    1. creo un repositorio en GITHUB
+    2. sigo los comandos, en la carpeta general del proyecto
+- segundo el server 
+    1. voy a render.com
+    2. asocio con GITHUB
+    3. new
+    4. Web Service
+    5. Connect a new repository (al fondo donde dice public git repository)
+    6. pego la url de github y CONTINUE
+    7. nombre
+    8. Root Directory: server
+    9. Enviroment: node
+    10.Build Command: Yarn / npm
+    11. Start command : npm run server
+    12. free
