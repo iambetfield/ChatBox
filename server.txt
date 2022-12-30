@@ -1,0 +1,20 @@
+1. crear carpeta server
+2. en la terminal dentro la carpeta: npm init -y (genera un .json )
+3. npm install 
+        cors(para requests crossOrigin) 
+        dotenv(para secure enviroment variables)
+        express (framework)
+        nodemon (keep app running on changes)
+        openai
+
+En la  Openai/API
+
+    click en profile
+    view API keys
+    new API key  
+
+luego del server.js, hay que modificar el package.json
+1. borrar el main.js
+2. dentro de scripts, agregar "server" : "nodemon server"
+3. agregar "type": "module"
+

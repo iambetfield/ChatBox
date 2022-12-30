@@ -66,9 +66,10 @@ function chatStripe (isAi, value, uniqueId){ // se usa template string porque ne
 
 
 const handleSubmit = async (e) =>{
-  e.preventDefault();
+  e.preventDefault(); // función que evita el reload por defecto del navegador al hacer un submit
 
   const data = new FormData(form);
+
   //chat del USUARIO
 
   //false es porque no es el chat delAI, y trae la data
@@ -85,7 +86,8 @@ const handleSubmit = async (e) =>{
   chatContainer.innerHTML += chatStripe(true, " ", uniqueId);
 
   //mientras el bot escribe scrollea para abajo para ver el msg
-  chatContainer.scrollTop = chatContainer.scrollWidth;
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+
 
   //para hacer un fetch del mensaje hay que depositar el valor en una variable
   const messageDiv = document.getElementById(uniqueId);
@@ -115,6 +117,7 @@ const handleSubmit = async (e) =>{
     const parsedData = data.bot.trim(); //parseamos la response 
 
     typeText(messageDiv, parsedData);
+    
   } else{
     const error = await response.text();
     messageDiv.innerHTML = "Something went wrong";
