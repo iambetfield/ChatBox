@@ -50,7 +50,7 @@ app.post('/', async(req,resp) =>{
 })
 const url = "https://chatbox-jdw3.onrender.com"
 //asegurar que el servidor este siempre escuchando los requests
-app.listen(url, ()=> console.log('Server is running on port https://chatbox-jdw3.onrender.com'));
+app.listen(5000, ()=> console.log('Server is running on port https://chatbox-jdw3.onrender.com'));
 
 //npm run server en la terminal
 
