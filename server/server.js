@@ -20,7 +20,7 @@ app.use(express.json()); //permite pasar json del front al back
 //creamos la ruta asincrona GET
 app.get('/', async (req, resp) =>{
     resp.status(200).send({
-        message: 'Hello from Codex', // devuelve un json
+        message: 'Por ahora estamos bien', // devuelve un json
     })
 });
 
@@ -48,9 +48,9 @@ app.post('/', async(req,resp) =>{
         resp.status(500).send(error);
     }
 })
-
+const url = "https://chatbox-jdw3.onrender.com"
 //asegurar que el servidor este siempre escuchando los requests
-app.listen(5000, ()=> console.log('Server is running on port http://localhost:5000'));
+app.listen(url, ()=> console.log('Server is running on port https://chatbox-jdw3.onrender.com'));
 
 //npm run server en la terminal
 
