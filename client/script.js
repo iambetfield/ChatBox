@@ -98,7 +98,7 @@ const handleSubmit = async (e) =>{
   // fetch data desde el server => para tener la respuesta del bot
 
   // primer parametro con el local host, segundo parámetro con todas las opciones
-  const response = await fetch('https://chatbox-jdw3.onrender.com', {
+  const response = await fetch('http://localhost:5000', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -120,7 +120,7 @@ const handleSubmit = async (e) =>{
     
   } else{
     const error = await response.text();
-    messageDiv.innerHTML = "Something went wrong";
+    messageDiv.innerHTML = "Ups! Algo anda mal..";
     alert(JSON.stringify(error));
   }
 }
